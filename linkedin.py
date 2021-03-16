@@ -5,7 +5,9 @@ import mechanize
 
 op = mechanize.Browser()
 op.set_handle_robots(False)
-
+op.addheaders = [('User-agent',
+        'Mozilla/5.0 (X11;U;Linux 2.4.2.-2 i586; en-us;m18) Gecko/200010131 Netscape6/6.01'
+        )]
 def getJob(role):
     jobsDictionary = {
         'success': True,
